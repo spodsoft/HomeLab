@@ -1,1 +1,110 @@
 Test
+#/bin/bash
+
+DATE=$(date +%H-%M-%S)
+BACKUP=db-$DATE.sql
+
+DB_HOST=$1
+DB_PASSWORD=$2
+DB_NAME=$3
+AWS_SECRET=$4
+BUCKET_NAME=$5
+
+mysqldump -u root -h $DB_HOST -p$DB_PASSWORD $DB_NAME > /tmp/$BACKUP && \
+export AWS_ACCESS_KEY_ID=AKIAJRWZWY3CPV3F3JPQ && \
+export AWS_SECRET_ACCESS_KEY=$AWS_SECRET && \
+echo "Uploading your $BACKUP backup" && \
+aws s3 cp /tmp/db-$DATE.sql s3://$BUCKET_NAME/$BACKUP
+ 
+
+ansible
+hosts file
+
+[all:vars]
+
+ansible_connection = ssh
+
+[test]
+
+test1 ansible_host=remote_host ansible_user=remote_user ansible_private_key_file=/var/jenkins_home/ansible/remote-key
+web1 ansible_host=web ansible_user=remote_user ansible_private_key_file=/var/jenkins_home/ansible/remote-key
+ 
+Enable ssh on SD Card
+touch /ssh
+/etc/wpa_supplicant/wpa_supplicant.conf
+country=GB
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+scan_ssid=1
+ssid="your_wifi_ssid"
+psk="your_wifi_password"
+}
+Post Install: Ubuntu
+Enable SSH
+sudo apt update
+sudo apt upgrade
+sudo apt install openssh-server
+sudo service ssh enable
+sudo service ssh start
+Enable desktop
+sudo apt install xubuntu-desktop
+sudo apt install lubuntu-desktop
+sudo apt install kubuntu-desktop
+Docker
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+    
+//Docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository \
+   "deb [arch=arm64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+   
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo usermod -aG docker ubuntu
+
+// Validate
+docker run hello-world
+
+// Docker Compose
+sudo apt-get install -y libffi-dev libssl-dev 
+sudo apt-get install -y python3 python3-pip 
+sudo apt-get remove python-configparser
+sudo pip3 install docker-compose 
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+docker-compose --version
+
+// Net tools
+sudo apt install net-tools
+
+Edited the rpi-eeprom-update file and changed the "critical" value for the FIRMWARE_RELEASE_STATUS option to "stable", using sudo nano /etc/default/rpi-eeprom-update.
+I ran the command to update the EEPROM:
+sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieeprom-2020-07-16.bin
+Reboot the Pi and check the bootloader version by opening Terminal and running:
+vcgencmd bootloader_version
+This should output something like:
+pi@raspberrypi:~ $ vcgencmd bootloader_version
+Jul 16 2020 16:15:46
+version 45291ce619884192a6622bef8948fb5151c2b456 (release)
+timestamp 1594912546
+sudo -E rpi-eeprom-config --edit
+$ git clone https://github.com/billw2/rpi-clone.git 
+$ cd rpi-clone
+$ sudo cp rpi-clone /usr/local/sbin/sys-clone
+$ sudo cp rpi-clone-setup /usr/local/sbin/sys-clone-setup
+ 
+sudo apt install ubuntu-desktop
+
+
+
