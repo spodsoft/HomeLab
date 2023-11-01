@@ -30,31 +30,31 @@ sudo apt install lubuntu-desktop
 sudo apt install kubuntu-desktop   
 
 # Docker 
-sudo apt-get install  
-apt-transport-https
-ca-certificates
-curl
-gnupg-agent
-software-properties-common
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 
-//Docker curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-sudo add-apt-repository
-"deb [arch=arm64] https://download.docker.com/linux/ubuntu
-$(lsb_release -cs)
-stable"
+sudo add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
-sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io sudo usermod -aG docker ubuntu
+sudo apt-get update 
+sudo apt-get install docker-ce docker-ce-cli containerd.io 
+sudo usermod -aG docker ubuntu
 
-// Validate docker run hello-world
+##  Validate 
+docker run hello-world
 
-// Docker Compose sudo apt-get install -y libffi-dev libssl-dev sudo apt-get install -y python3 python3-pip sudo apt-get remove python-configparser sudo pip3 install docker-compose
+# Docker Compose 
+sudo apt-get install -y libffi-dev libssl-dev 
+sudo apt-get install -y python3 python3-pip 
+sudo apt-get remove python-configparser 
+sudo pip3 install docker-compose
 
 sudo chmod +x /usr/local/bin/docker-compose
 
 docker-compose --version
 
-// Net tools sudo apt install net-tools
+#  Net tools 
+sudo apt install net-tools
 
 Edited the rpi-eeprom-update file and changed the "critical" value for the FIRMWARE_RELEASE_STATUS option to "stable", using sudo nano /etc/default/rpi-eeprom-update. I ran the command to update the EEPROM: sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieeprom-2020-07-16.bin Reboot the Pi and check the bootloader version by opening Terminal and running: vcgencmd bootloader_version This should output something like: pi@raspberrypi:~ $ vcgencmd bootloader_version Jul 16 2020 16:15:46 version 45291ce619884192a6622bef8948fb5151c2b456 (release) timestamp 1594912546 sudo -E rpi-eeprom-config --edit $ git clone https://github.com/billw2/rpi-clone.git $ cd rpi-clone $ sudo cp rpi-clone /usr/local/sbin/sys-clone $ sudo cp rpi-clone-setup /usr/local/sbin/sys-clone-setup
 
