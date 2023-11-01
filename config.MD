@@ -4,16 +4,16 @@ touch /ssh
 # Enable Wifi
 vi /etc/wpa_supplicant/wpa_supplicant.conf 
 
-  country=GB 
-  ctrl_interface=/var/run/wpa_supplicant 
-  GROUP=netdev 
-  update_config=1
+  	country=GB 
+  	ctrl_interface=/var/run/wpa_supplicant 
+  	GROUP=netdev 
+  	update_config=1
 
-  network={ 
-    scan_ssid=1 
-    ssid="your_wifi_ssid" 
-    psk="your_wifi_password" 
-  } 
+	network={ 
+	  scan_ssid=1 
+	  ssid="your_wifi_ssid" 
+      psk="your_wifi_password" 
+  	} 
 
 # Post Install: 
 
