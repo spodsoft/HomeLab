@@ -65,9 +65,16 @@ I ran the command to update the EEPROM: sudo rpi-eeprom-update -d -f /lib/firmwa
 Reboot the Pi and check the bootloader version by opening Terminal and running: vcgencmd bootloader_version This should output something like: pi@raspberrypi:~ $ vcgencmd bootloader_version Jul 16 2020 16:15:46 version 45291ce619884192a6622bef8948fb5151c2b456 (release) timestamp 1594912546 
 
 sudo -E rpi-eeprom-config --edit  
+
+#  CLone a booted disk
 git clone https://github.com/billw2/rpi-clone.git  
 cd rpi-clone  
 sudo cp rpi-clone /usr/local/sbin/sys-clone   
 sudo cp rpi-clone-setup /usr/local/sbin/sys-clone-setup  
 
+## Test  
+sudo rpi-clone-setup -t testhostname
+
+## Clone to sdb  
+sudo rpi-clone sdb
 
