@@ -18,19 +18,19 @@ vi /etc/wpa_supplicant/wpa_supplicant.conf
 # Post Install: 
 
 ## Ubuntu Enable SSH 
-sudo apt update 
-sudo apt upgrade 
-sudo apt install openssh-server 
-sudo service ssh enable 
-sudo service ssh start 
+sudo apt update   
+sudo apt upgrade   
+sudo apt install openssh-server   
+sudo service ssh enable   
+sudo service ssh start   
 
-## Enable desktop 
-sudo apt install xubuntu-desktop 
-sudo apt install lubuntu-desktop 
-sudo apt install kubuntu-desktop 
+## Enable desktop   
+sudo apt install xubuntu-desktop   
+sudo apt install lubuntu-desktop   
+sudo apt install kubuntu-desktop   
 
 # Docker 
-sudo apt-get install
+sudo apt-get install  
 apt-transport-https
 ca-certificates
 curl
