@@ -69,17 +69,17 @@ sudo -E rpi-eeprom-config --edit
 https://gitee.com/jikexianfeng/documentation/blob/master/hardware/raspberrypi/bcm2711_bootloader_config.md
 
 
-##  EEPROM Update
-Edited the rpi-eeprom-update file and changed the "critical" value for the FIRMWARE_RELEASE_STATUS option to "stable", using sudo nano /etc/default/rpi-eeprom-update. 
+##  EEPROM Bootloader
+Edited the rpi-eeprom-update file and changed the "critical" value for the FIRMWARE_RELEASE_STATUS option to "stable", using  
+sudo nano /etc/default/rpi-eeprom-update. 
 
-I ran the command to update the EEPROM: sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieeprom-2020-07-16.bin 
+Run the command to update the EEPROM:  
+sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieeprom-2020-07-16.bin 
 
 Reboot the Pi and check the bootloader version by opening Terminal and running:   
-
 vcgencmd bootloader_version   
 
 This should output something like:  
-
 vcgencmd bootloader_version Jul 16 2020 16:15:46 version 45291ce619884192a6622bef8948fb5151c2b456 (release) timestamp 1594912546   
 
 
@@ -95,3 +95,12 @@ sudo rpi-clone-setup -t testhostname
 ## Clone to sdb  
 sudo rpi-clone sdb
 
+#  Useful
+
+## vcgencmd
+vcgencmd commands - list of commands  
+vcgencmd measure_temp - measures temp
+
+## htop
+Monitor system resources  
+sudo apt install htop
