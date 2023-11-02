@@ -57,14 +57,31 @@ docker-compose --version
 #  Net tools 
 sudo apt install net-tools  
 
+#  EEPROM & Bootloader
+sudo apt install rpi-eeprom -y  
 
+To view the current EEPROM configuration:  
+rpi-eeprom-config  
+
+To edit it and apply the updates to latest EEPROM release:  
+sudo -E rpi-eeprom-config --edit    
+
+https://gitee.com/jikexianfeng/documentation/blob/master/hardware/raspberrypi/bcm2711_bootloader_config.md
+
+
+##  EEPROM Update
 Edited the rpi-eeprom-update file and changed the "critical" value for the FIRMWARE_RELEASE_STATUS option to "stable", using sudo nano /etc/default/rpi-eeprom-update. 
 
 I ran the command to update the EEPROM: sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieeprom-2020-07-16.bin 
 
-Reboot the Pi and check the bootloader version by opening Terminal and running: vcgencmd bootloader_version This should output something like: pi@raspberrypi:~ $ vcgencmd bootloader_version Jul 16 2020 16:15:46 version 45291ce619884192a6622bef8948fb5151c2b456 (release) timestamp 1594912546 
+Reboot the Pi and check the bootloader version by opening Terminal and running:   
 
-sudo -E rpi-eeprom-config --edit  
+vcgencmd bootloader_version   
+
+This should output something like:  
+
+vcgencmd bootloader_version Jul 16 2020 16:15:46 version 45291ce619884192a6622bef8948fb5151c2b456 (release) timestamp 1594912546   
+
 
 #  CLone a booted disk
 git clone https://github.com/billw2/rpi-clone.git  
