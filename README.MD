@@ -15,7 +15,9 @@ export AWS_ACCESS_KEY_ID=AKIAJRWZWY3CPV3F3JPQ && \
 export AWS_SECRET_ACCESS_KEY=$AWS_SECRET && \
 echo "Uploading your $BACKUP backup" && \
 aws s3 cp /tmp/db-$DATE.sql s3://$BUCKET_NAME/$BACKUP
- 
+
+
+ https://pimylifeup.com/raspberry-pi-diyhue/
 
 # Ansible
 hosts file
