@@ -31,9 +31,9 @@ sudo apt install kubuntu-desktop
 sudo apt install ubuntu-desktop  
 
 # Docker 
-curl -fsSL https://test.docker.com -o test-docker.sh
+curl -fsSL https://get.docker.com -o get-docker.sh
 
- sudo sh test-docker.sh
+ sudo sh get-docker.sh
 # Pre Reqs
 sudo apt-get install apt-transport-https ca-certificates curl
 
