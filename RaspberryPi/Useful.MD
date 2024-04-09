@@ -2,9 +2,9 @@
 
 ##  NVME logs
 
-> journalctl -f -g nvme
+`journalctl -f -g nvme`
 
 ## Show PCI devices
 
-> lspci
+`lspci`
 
