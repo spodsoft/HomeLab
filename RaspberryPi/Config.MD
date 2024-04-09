@@ -1,7 +1,7 @@
 # Raspberry Pi Config
 
-- [Raspberry PI5](#Raspberry Pi 5)
-- [EEPROM and Bootloader](#eeprom)
+- [Raspberry PI5](#raspberry-pi-5)
+- [EEPROM and Bootloader](#eeprom-&-bootloader)
 
 ---
 
@@ -31,7 +31,7 @@ PCIE_PROBE=1
 ````
 
 ---
-#  EEPROM & Bootloader {#eeprom}
+#  EEPROM & Bootloader
 
 To install tools
 `sudo apt install rpi-eeprom -y`  
