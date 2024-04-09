@@ -1,7 +1,7 @@
 # Raspberry Pi Config
 
 - [Raspberry PI5](#raspberry-pi-5)
-- [EEPROM and Bootloader](#eeprom-&-bootloader)
+- [EEPROM and Bootloader](#eeprom--bootloader)
 
 ---
 
@@ -31,6 +31,7 @@ PCIE_PROBE=1
 ````
 
 ---
+
 #  EEPROM & Bootloader
 
 To install tools
@@ -43,7 +44,6 @@ To edit it and apply the updates to latest EEPROM release:
 `sudo -E rpi-eeprom-config --edit`
 
 [EEPROM Values](https://gitee.com/jikexianfeng/documentation/blob/master/hardware/raspberrypi/bcm2711_bootloader_config.md)
-
 
 ##  EEPROM Bootloader
 
