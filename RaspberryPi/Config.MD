@@ -41,7 +41,10 @@ To edit it and apply the updates to latest EEPROM release:
 
 
 ##  EEPROM Bootloader
-Edited the rpi-eeprom-update file and changed the "critical" value for the FIRMWARE_RELEASE_STATUS option to "stable", using  
+
+To update the firmware branch to use:
+
+Edit the rpi-eeprom-update file and changed the "critical" value for the FIRMWARE_RELEASE_STATUS option to "stable", using  
 `sudo nano /etc/default/rpi-eeprom-update`
 
 Run the command to update the EEPROM:  
@@ -51,5 +54,5 @@ Reboot the Pi and check the bootloader version by opening Terminal and running:
 `vcgencmd bootloader_version`
 
 This should output something like:  
-`vcgencmd bootloader_version Jul 16 2020 16:15:46 version 45291ce619884192a6622bef8948fb5151c2b456 (release) timestamp 1594912546``
+`vcgencmd bootloader_version Jul 16 2020 16:15:46 version 45291ce619884192a6622bef8948fb5151c2b456 (release) timestamp 1594912546`
   
