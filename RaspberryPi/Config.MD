@@ -1,11 +1,11 @@
 # Raspberry Pi Config
 
-- [Raspberry PI5](#rpi5)
+- [Raspberry PI5](#Raspberry Pi 5)
 - [EEPROM and Bootloader](#eeprom)
 
 ---
 
-## Raspberry Pi 5 {#rpi5}
+## Raspberry Pi 5
 
 > /boot/firmware/config.txt
 
