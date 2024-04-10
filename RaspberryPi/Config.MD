@@ -2,6 +2,10 @@
 
 - [Raspberry PI5](#raspberry-pi-5)
 - [EEPROM and Bootloader](#eeprom--bootloader)
+- [Enable SSH](#enable-ssh)
+- [Enble Wifi](#enable-wifi)
+- [Enable Desktop](#enable-desktop)
+
 
 ---
 
@@ -60,10 +64,22 @@ Reboot the Pi and check the bootloader version by opening Terminal and running:
 
 This should output something like:  
 `vcgencmd bootloader_version Jul 16 2020 16:15:46 version 45291ce619884192a6622bef8948fb5151c2b456 (release) timestamp 1594912546`
+
+---
   
-## Enable ssh on SD Card 
+## Enable ssh 
+
+### On SD Card 
 
 `touch /ssh`
+
+### Ubuntu Enable SSH 
+sudo apt update   
+sudo apt upgrade   
+sudo apt install openssh-server   
+sudo service ssh enable   
+sudo service ssh start   
+
 
 ## Enable Wifi
 
@@ -82,16 +98,30 @@ Edit /etc/wpa_supplicant/wpa_supplicant.conf
   	} 
 ````
 
-
-## Ubuntu Enable SSH 
-sudo apt update   
-sudo apt upgrade   
-sudo apt install openssh-server   
-sudo service ssh enable   
-sudo service ssh start   
+---
 
 ## Enable desktop   
 sudo apt install xubuntu-desktop   
 sudo apt install lubuntu-desktop   
 sudo apt install kubuntu-desktop   
 sudo apt install ubuntu-desktop  
+
+---
+
+##  Clone a booted disk
+
+```
+git clone https://github.com/billw2/rpi-clone.git  
+cd rpi-clone  
+sudo cp rpi-clone /usr/local/sbin/sys-clone   
+sudo cp rpi-clone-setup /usr/local/sbin/sys-clone-setup  
+```
+
+### Test  
+
+`sudo rpi-clone-setup -t testhostname`
+
+### Clone to sdb  
+
+`sudo rpi-clone sdb`
+

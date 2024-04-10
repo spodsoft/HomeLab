@@ -8,3 +8,12 @@
 
 `lspci`
 
+
+## Show usb devices
+
+`lsusb`
+
+## Change user group
+
+`sudo usermod -aG sudo fred`
+
