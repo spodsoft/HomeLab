@@ -36,3 +36,11 @@
 ## Power Usage
 
 `powertop`
+
+## Bluetooth
+
+`bluetoothctl`
+
+## Smart 
+
+`smartctl`
