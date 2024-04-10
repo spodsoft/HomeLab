@@ -1,0 +1,29 @@
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:latest
+    network_mode: "bridge"
+    restart: always
+    ports:
+      - 9000:9000
+      - 8000:8000
+    volumes:
+      - /data/portainer:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  portainer_agent:
+    container_name: portainer_agent
+    image: portainer/agent:2.19.4
+    network_mode: "bridge"
+    restart: unless-stopped
+    ports:
+      - 9001:9001
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/docker/volumes:/var/lib/docker/volumes
+      - /:/host
+      - /data/portainer_agent:/data
+    environment:
+      - EDGE=1
+      - EDGE_ID=xxxxx
+      - EDGE_KEY=xxxxx
+      - EDGE_INSECURE_POLL=1

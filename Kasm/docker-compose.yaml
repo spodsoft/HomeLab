@@ -1,0 +1,17 @@
+  kasm:
+    container_name: kasm
+    image: lscr.io/linuxserver/kasm:latest
+    network_mode: "bridge"
+    privileged: true
+    environment:
+      - KASM_PORT=8443
+#      - DOCKER_HUB_USERNAME=USER #optional
+#      - DOCKER_HUB_PASSWORD=PASS #optional
+#     - DOCKER_MTU=1500 #optional
+    volumes:
+      - /data/kasm/opt:/opt
+      - /data/kasm/profiles:/profiles #optional
+    ports:
+      - 8444:3000
+      - 8443:8443
+    restart: unless-stopped
