@@ -61,3 +61,37 @@ Reboot the Pi and check the bootloader version by opening Terminal and running:
 This should output something like:  
 `vcgencmd bootloader_version Jul 16 2020 16:15:46 version 45291ce619884192a6622bef8948fb5151c2b456 (release) timestamp 1594912546`
   
+## Enable ssh on SD Card 
+
+`touch /ssh`
+
+## Enable Wifi
+
+Edit /etc/wpa_supplicant/wpa_supplicant.conf 
+
+```
+  	country=GB 
+  	ctrl_interface=/var/run/wpa_supplicant 
+  	GROUP=netdev 
+  	update_config=1
+
+	network={ 
+	  scan_ssid=1 
+	  ssid="your_wifi_ssid" 
+      psk="your_wifi_password" 
+  	} 
+````
+
+
+## Ubuntu Enable SSH 
+sudo apt update   
+sudo apt upgrade   
+sudo apt install openssh-server   
+sudo service ssh enable   
+sudo service ssh start   
+
+## Enable desktop   
+sudo apt install xubuntu-desktop   
+sudo apt install lubuntu-desktop   
+sudo apt install kubuntu-desktop   
+sudo apt install ubuntu-desktop  
