@@ -4,6 +4,14 @@
 
 `journalctl -f -g nvme`
 
+## Show Hardware
+
+`lshw`
+
+## Show CPU
+
+`lscpu`
+
 ## Show PCI devices
 
 `lspci`
@@ -17,3 +25,14 @@
 
 `sudo usermod -aG sudo fred`
 
+## Wifi Status
+
+`wifi-status`
+
+## Sensor
+
+`sensors`
+
+## Power Usage
+
+`powertop`
