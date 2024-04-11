@@ -1,6 +1,6 @@
 # Useful commands
 
-##  NVME logs
+###  NVME logs
 
 `journalctl -f -g nvme`
 
