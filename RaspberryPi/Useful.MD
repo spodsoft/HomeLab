@@ -4,43 +4,43 @@
 
 `journalctl -f -g nvme`
 
-## Show Hardware
+### Show Hardware
 
 `lshw`
 
-## Show CPU
+### Show CPU
 
 `lscpu`
 
-## Show PCI devices
+### Show PCI devices
 
 `lspci`
 
 
-## Show usb devices
+### Show usb devices
 
 `lsusb`
 
-## Change user group
+### Change user group
 
 `sudo usermod -aG sudo fred`
 
-## Wifi Status
+### Wifi Status
 
 `wifi-status`
 
-## Sensor
+### Sensor
 
 `sensors`
 
-## Power Usage
+### Power Usage
 
 `powertop`
 
-## Bluetooth
+### Bluetooth
 
 `bluetoothctl`
 
-## Smart 
+### Smart 
 
 `smartctl`
