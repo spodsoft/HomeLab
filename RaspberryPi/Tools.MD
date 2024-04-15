@@ -18,3 +18,9 @@ Eg iwconfig
 
 Eg powertop
 `sudo apt install powertop`
+
+## Smart Tools
+
+Eg smartctl
+`sudo apt install smartmontools`
+
