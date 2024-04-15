@@ -34,3 +34,4 @@ web1 ansible_host=web ansible_user=remote_user ansible_private_key_file=/var/jen
 
 
 
+curl -fsSL https://get.casaos.io | sudo bash
