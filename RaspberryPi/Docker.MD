@@ -7,6 +7,19 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
+## Add 'pi' user to the 'docker' group
+
+`sudo usermod -aG docker pi`
+
+## Unmask the Docker service
+
+
+`sudo systemctl unmask docker`
+
+## Fix permissions for Docker socket
+
+`sudo chmod 666 /var/run/docker.sock`
+
 ##  Validate 
 
 `docker run hello-world`
@@ -24,6 +37,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 ## Validate
 
-```
-docker-compose --version 
-``` 
+`docker-compose --version`
+
+## Start Docker service
+
+`sudo systemctl start docker`
