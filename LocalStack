@@ -1,0 +1,22 @@
+To get started, here are a few handy links:
+
+Install LocalStack:
+docs.localstack.cloud/getting-started/installation
+Configure an API Key:
+docs.localstack.cloud/getting-started/api-key
+Check out our quickstart:
+docs.localstack.cloud/getting-started/quickstart
+Join our community channels:
+localstack.cloud/contact
+With this, you can set up LocalStack on your machine, utilize a trial plan to start LocalStack with an API key, and run an AWS Serverless application locally without having to connect to a remote cloud provider.
+
+To use LocalStack, we provide ample resources, examples, and sample applications to get started:
+
+User Guides:
+docs.localstack.cloud/user-guide
+LocalStack Tutorials:
+docs.localstack.cloud/tutorials
+LocalStack Samples:
+github.com/localstack/localstack-pro-samples
+LocalStack Blog:
+localstack.cloud/blog
