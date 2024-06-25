@@ -20,3 +20,23 @@ LocalStack Samples:
 github.com/localstack/localstack-pro-samples
 LocalStack Blog:
 localstack.cloud/blog
+
+
+https://docs.localstack.cloud/user-guide/integrations/aws-cli/
+
+localstack config validate
+
+
+https://host:4566/_localstack/health
+
+/diagnose
+
+
+
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+The following environment variables can be configured:
+* AWS_ENDPOINT_URL: The endpoint URL to connect to (combination of USE_SSL/LOCALSTACK_HOSTNAME/EDGE_PORT below)
+* EDGE_PORT (deprecated): Port under which LocalStack edge service is accessible (default: 4566)
+
+
