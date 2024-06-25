@@ -1,8 +1,8 @@
 # LocalStack
 
 Links:
-- [Install LocalStack] (https://docs.localstack.cloud/getting-started/installation)
-- [Configure an API Key] (https://docs.localstack.cloud/getting-started/api-key)
+- [Install LocalStack](https://docs.localstack.cloud/getting-started/installation)
+- [Configure an API Key](https://docs.localstack.cloud/getting-started/api-key)
 - [Quickstart Guide](https://docs.localstack.cloud/getting-started/quickstart)
 
 - [User Guides](https://docs.localstack.cloud/user-guide)
