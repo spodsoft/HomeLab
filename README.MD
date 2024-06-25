@@ -73,3 +73,57 @@ sudo systemctl start docker
 sudo systemctl enable docker
 
 sudo systemctl status docker
+
+
+
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+
+
+	•	sudo nano /etc/wpa_supplicant/wpa_supplicant.conf.
+	•	network={ ssid="The SSID of your network (eg. Network name)" psk="Your Wifi Password" }
+	•	sudo ifdown wlan0.
+	•	sudo ifup wlan0.
+	•	ifconfig.
+	•	sudo nano /etc/dhcpcd.conf.
+	•	sudo reboot.
+	•	hostname -I.
+
+
+Hciconfig
+sudo systemctl stop bluetooth
+
+
+vi /boot/firmware/cmdline.txt 
+/boot/firmware//config.txt
+
+ vcgencmd measure_temp
+vcgencmd bootloader_config
+
+smartctl -all /dev/nvme0##
+
+
+smartctl -a /dev/nvme0n1p2
+
+lsb_release
+lsb_release --codename
+dpkg --print-architecture
+
+
+For most Linux distributions, the guest agent is available. The package is usually named qemu-guest-agent.
+For Windows, it can be installed from the Fedora VirtIO driver ISO.
+
