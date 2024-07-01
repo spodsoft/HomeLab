@@ -1,5 +1,6 @@
 # BASH
 
+```
 #--------- Added to signal a required reboot on login ------ 
 rbfile="/var/run/reboot-required" 
 if [ -e $rbfile ]; 
@@ -17,3 +18,4 @@ uptime
 
 echo "----------------------------------------------------------------" 
 echo ""
+```
