@@ -44,3 +44,7 @@
 ### Smart 
 
 `smartctl`
+
+`smartctl -all /dev/nvme0##`
+
+`smartctl -a /dev/nvme0n1p2`
