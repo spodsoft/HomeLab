@@ -34,6 +34,8 @@ BOOT_ORDER=0xf416
 PCIE_PROBE=1
 ````
 
+`vcgencmd bootloader_config`
+
 ---
 
 #  EEPROM & Bootloader
@@ -124,4 +126,25 @@ sudo cp rpi-clone-setup /usr/local/sbin/sys-clone-setup
 ### Clone to sdb  
 
 `sudo rpi-clone sdb`
+
+---
+
+## WiFi
+
+```
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf.
+•	network={ ssid="The SSID of your network (eg. Network name)" psk="Your Wifi Password" }
+•	sudo ifdown wlan0.
+•	sudo ifup wlan0.
+•	ifconfig.
+•	sudo nano /etc/dhcpcd.conf.
+•	sudo reboot.
+•	hostname -I.
+```
+
+## Bluetooth
+
+`Hciconfig sudo systemctl stop bluetooth`
+
+
 
