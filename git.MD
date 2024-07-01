@@ -1,3 +1,5 @@
-gh auth login
+# GIT
 
-git clone https://github.com/spodsoft/
+`gh auth login`
+
+`git clone https://github.com/spodsoft/`
