@@ -18,3 +18,14 @@ docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=
 ollama pull deepseek-r1:8b
 
 
+## Torch
+pip3 install torch torchvision
+
+##Jupyter Notebook 
+pip install notebook
+
+jupyter notebook
+
+##Jupyter Lab
+pip install jupyterlab
+jupyter lab
