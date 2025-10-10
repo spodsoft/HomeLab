@@ -1,0 +1,10 @@
+Graphics Card: Select "VirtIO-GPU" Machine: Choose "q35" (this is the modern machine type recommended for desktop VMs) 
+BIOS: Select "OVMF (UEFI)" for better compatibility 
+Add EFI Disk: Enable this option
+SCSI Controller: VirtIO SCSI
+Qemu Agent: Enable this option
+
+The VirtIO-GPU provides better graphics performance than other options, while UEFI boot offers modern features and better compatibility.
+
+
+To get the installer to work, using SCSI, change the controller type from the default of "Virt0 SCSI Single" to "Virt0 SCSI" (no single - I guess this VM is now married to ProxMox.)
