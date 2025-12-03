@@ -25,3 +25,41 @@ postgres:
     echo done > /initialised.txt &&
     wait"
   ]
+
+
+By default psql connects to the database with the same name as the user. So there is a convention to make that the "user's database". 
+And there isn't any reason to break that convention if your user only needs one database. We'll be using mydatabase as the example database name.
+
+    Using createuser and createdb, we can be explicit about the database name,
+
+    $ sudo -u postgres createuser -s $USER
+    $ createdb mydatabase
+    $ psql -d mydatabase
+
+    You should probably be omitting that entirely and letting all the commands default to the user's name instead.
+
+    $ sudo -u postgres createuser -s $USER
+    $ createdb
+    $ psql
+
+    Using the SQL administration commands, and connecting with a password over TCP
+
+    $ sudo -u postgres psql postgres
+
+    And, then in the psql shell
+
+    CREATE ROLE myuser LOGIN PASSWORD 'mypass';
+    CREATE DATABASE mydatabase WITH OWNER = myuser;
+
+    Then you can login,
+
+    $ psql -h localhost -d mydatabase -U myuser -p <port>
+
+    If you don't know the port, you can always get it by running the following, as the postgres user,
+
+    SHOW port;
+
+    Or,
+
+    $ grep "port =" /etc/postgresql/*/main/postgresql.conf
+
