@@ -69,6 +69,7 @@ Restart SSH:
 ## 6. Services
 
 See what's listening:
+
     sudo ss -tulpn
 
     sudo systemctl disable cups
