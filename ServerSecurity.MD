@@ -12,7 +12,7 @@ OR
 usermod -aG sudo deployer``
 
 Disable root password login
-'sudo passwd -l root'
+`sudo passwd -l root`
 
 ## 3. SSH Auth
 
@@ -26,7 +26,7 @@ Copy it to the server:
 
 Then update the /etc/ssh/ssd_config:
 
-```PermitRootLogin no
+``PermitRootLogin no
 PasswordAuthentication no
 PermitEmptyPasswords no
 MaxAuthTries 3
@@ -48,7 +48,7 @@ sudo ufw enable``
 
 ## 5. Fail2Ban
 
-'''sudo apt install fail2ban
+``sudo apt install fail2ban
 
 sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 sudo nano /etc/fail2ban/jail.local
@@ -61,13 +61,13 @@ bantime = 3600
 findtime = 600
 
 sudo systemctl restart fail2ban
-sudo systemctl enable fail2ban'''
+sudo systemctl enable fail2ban``
 
 ## 6. Services
 
-```See what's listening:
+``See what's listening:
 sudo ss -tulpn
 
 sudo systemctl disable cups
-sudo systemctl stop cups```
+sudo systemctl stop cups``
 
