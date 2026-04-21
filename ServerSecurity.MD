@@ -2,50 +2,50 @@
 
 ## 1. Enable automatic security updates:
 
-  sudo apt install unattended-upgrades
+    `sudo apt install unattended-upgrades`
 OR
-  sudo dpkg-reconfigure unattended-upgrades
+    `sudo dpkg-reconfigure unattended-upgrades`
 
 ## 2. Create a non-root user:
 
-  adduser deployer
-  usermod -aG sudo deployer
+    `adduser deployer`
+    `usermod -aG sudo deployer`
 
 Disable root password login
 
-  sudo passwd -l root
+    `sudo passwd -l root`
 
 ## 3. SSH Auth
 
 Generate a key on your local machine:
 
-  ssh-keygen -t ed25519 -C "your-email@example.com"
+    `ssh-keygen -t ed25519 -C "your-email@example.com"`
 
 Copy it to the server:
 
-  ssh-copy-id deployer@your-server-ip
+    `ssh-copy-id deployer@your-server-ip`
 
 Then update the /etc/ssh/ssd_config:
 
-  PermitRootLogin no
-  PasswordAuthentication no
-  PermitEmptyPasswords no
-  MaxAuthTries 3
-  AllowUsers deployer
+    PermitRootLogin no
+    PasswordAuthentication no
+    PermitEmptyPasswords no
+    MaxAuthTries 3
+    AllowUsers deployer
 
 Restart SSH:
 
-  sudo systemctl restart sshd
+    sudo systemctl restart sshd
 
 ## 4. Firewall
 
-  sudo apt install ufw
-  sudo ufw default deny incoming
-  sudo ufw default allow outgoing
-  sudo ufw allow ssh
-  sudo ufw allow 80/tcp
-  sudo ufw allow 443/tcp
-  sudo ufw enable
+    sudo apt install ufw 
+    sudo ufw default deny incoming
+    sudo ufw default allow outgoing
+    sudo ufw allow ssh
+    sudo ufw allow 80/tcp
+    sudo ufw allow 443/tcp
+    sudo ufw enable
 
 ## 5. Fail2Ban
 
