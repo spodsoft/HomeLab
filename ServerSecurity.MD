@@ -8,8 +8,8 @@ OR
 
 ## 2. Create a non-root user:
 
-```adduser deployer
-usermod -aG sudo deployer```
+``adduser deployer
+usermod -aG sudo deployer``
 
 Disable root password login
 'sudo passwd -l root'
