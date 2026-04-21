@@ -1,12 +1,12 @@
 # Server Security
 
-##1. Enable automatic security updates:
+## 1. Enable automatic security updates:
 
 'sudo apt install unattended-upgrades'
 OR
 'sudo dpkg-reconfigure unattended-upgrades'
 
-##2. Create a non-root user:
+## 2. Create a non-root user:
 
 adduser deployer
 usermod -aG sudo deployer
@@ -14,7 +14,7 @@ usermod -aG sudo deployer
 Disable root password login
 'sudo passwd -l root'
 
-##3. SSH Auth
+## 3. SSH Auth
 
 Generate a key on your local machine:
 
@@ -37,7 +37,7 @@ Restart SSH:
 
 'sudo systemctl restart sshd'
 
-##4. Firewall
+## 4. Firewall
 
 '''sudo apt install ufw
 sudo ufw default deny incoming
@@ -47,7 +47,7 @@ sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 sudo ufw enable'''
 
-##5. Fail2Ban
+## 5. Fail2Ban
 
 '''sudo apt install fail2ban
 
@@ -64,11 +64,11 @@ findtime = 600
 sudo systemctl restart fail2ban
 sudo systemctl enable fail2ban'''
 
-##6. Services
+## 6. Services
 
-'''See what's listening:
+```See what's listening:
 sudo ss -tulpn
 
 sudo systemctl disable cups
-sudo systemctl stop cups'''
+sudo systemctl stop cups```
 
