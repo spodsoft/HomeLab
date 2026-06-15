@@ -41,7 +41,7 @@ sudo apt install docker-compose
 
 ```
 sudo systemctl start docker
-sudo systemctl enable docke
+sudo systemctl enable docker
 sudo systemctl status docker
 ```
 
