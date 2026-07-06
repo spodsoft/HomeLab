@@ -11,4 +11,4 @@ RUN pip install Flask
 COPY . .
 
 # The command to run when the container starts
-CMD ["python", "app.py"]
+CMD ["python", "joke.py"]
