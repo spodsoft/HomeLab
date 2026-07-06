@@ -7,3 +7,7 @@ deployment.apps/joke-deployment created
 
 Verify POD created
 kubectl get pods
+
+
+kubectl apply -f service.yaml
+
