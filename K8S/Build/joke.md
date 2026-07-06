@@ -14,8 +14,10 @@ Expect:
 deployment.apps/joke-deployment created
 
 Verify POD created
+
 `kubectl get pods`
 
 Deploy Service
+
 `kubectl apply -f service.yaml`
 
