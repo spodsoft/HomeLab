@@ -30,19 +30,25 @@ net.ipv4.ip_forward = 1
 EOF```
 4. `sudo apt install -y containerd`
 5. `sudo systemctl enable --now containerd`
-6. ```sudo mkdir -p /etc/containerd
+6. ```
+sudo mkdir -p /etc/containerd
 containerd config default | sudo tee /etc/containerd/config.toml
 sudo sed -i 's/SystemCgroup =false/SystemCgroup = true/' /etc/containerd/config.toml
-sudo systemctl restart containerd```
+sudo systemctl restart containerd
+```
 7. `ls /var/run/containerd/containerd.sock`
 
 AFTER THAT
 
 1. `ip route show`
-2. ```sudo kubeadm init \
+2. ```
+sudo kubeadm init \
 --apiserver-advertise-address="YOURip" \
---pod-network-cidr="YOURcidr"```
-3. ```mkdir -p $HOME/.kube
+--pod-network-cidr="YOURcidr"
+```
+3. ```
+mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config```
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
 4. `kubectl apply -f https://raw.githubusercontent.com/fla...`
