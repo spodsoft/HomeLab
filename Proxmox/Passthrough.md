@@ -34,3 +34,5 @@ Find gpu Id, eg. 00:02
 `echo "options vfio-pci ids=8086:5912 disable_vga=1"> /etc/modprobe.d/vfio.conf`
 
 `update-initramfs -u`
+
+https://www.doscher.com/gpu-passthrough-for-intel/
