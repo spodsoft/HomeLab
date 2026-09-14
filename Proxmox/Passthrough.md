@@ -6,7 +6,7 @@
 Edit /etc/default/grub
 
 Replace	GRUB_CMDLINE_LINUX_DEFAULT="quiet"
-With	GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on"
+With	GG
 
 `update-grub`
 
@@ -31,7 +31,9 @@ Find gpu Id, eg. 00:02
 
 `lspci -n -s 00:02`
 
-`echo "options vfio-pci ids=8086:5912 disable_vga=1"> /etc/modprobe.d/vfio.conf`
+00:02.0 0300: 8086:4692 (rev 0c)
+
+`echo "options vfio-pci ids=8086:4692 disable_vga=1"> /etc/modprobe.d/vfio.conf`
 
 `update-initramfs -u`
 
