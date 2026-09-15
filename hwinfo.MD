@@ -46,3 +46,16 @@ if ! shopt -oq posix; then
 fi
 
 . ~/.bash_start
+
+
+------
+# Temperatures
+
+`sudo apt install lm-sensors`
+
+Determin sensors
+`sudo sensors-detect`
+
+View temperatures
+sensors
+`sensors`
