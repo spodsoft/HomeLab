@@ -10,8 +10,10 @@
 
 ## Install IOStat
 
-```apt install sysstat
+```
+apt install sysstat
 iostat -dx 5
+```
 
 ## Recent logging
 
@@ -21,8 +23,10 @@ iostat -dx 5
 
 ### Log usage
 
-```du -sh /var/log
-journalctl --disk-usage'```
+```
+du -sh /var/log
+journalctl --disk-usage'
+```
 
 `sudo journalctl --vacuum-time=2d`
 
