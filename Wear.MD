@@ -11,7 +11,7 @@
 ## Install IOStat
 
 ```apt install sysstat
-iostat -dx 5```
+iostat -dx 5
 
 ## Recent logging
 
